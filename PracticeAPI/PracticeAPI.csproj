@@ -274,9 +274,14 @@
     <Compile Include="Migrations\201804291925488_initMigration.Designer.cs">
       <DependentUpon>201804291925488_initMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805120511104_AddAuditInfoClass.cs" />
+    <Compile Include="Migrations\201805120511104_AddAuditInfoClass.Designer.cs">
+      <DependentUpon>201805120511104_AddAuditInfoClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Entity\AuditInfo.cs" />
     <Compile Include="Models\Entity\PracticeEntity.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\PracticeContext.cs" />
@@ -364,6 +369,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201804291925488_initMigration.resx">
       <DependentUpon>201804291925488_initMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805120511104_AddAuditInfoClass.resx">
+      <DependentUpon>201805120511104_AddAuditInfoClass.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

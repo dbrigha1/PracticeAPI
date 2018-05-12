@@ -6,10 +6,9 @@ using System.Web;
 
 namespace PracticeAPI.Models.Entity
 {
-    public class PracticeEntity : AuditInfo
+    public class AuditInfo
     {
-        [Key]
-        public int PracticeId { get; set; }
-        public string PracticeName { get; set; }
+        [Required]
+        public string UserId { get; set; }
     }
 }

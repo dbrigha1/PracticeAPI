@@ -7,6 +7,7 @@ using Unity;
 using Unity.Injection;
 using Unity.WebApi;
 using PracticeAPI.Mapper;
+using System.Web;
 
 namespace PracticeAPI
 {
@@ -32,6 +33,7 @@ namespace PracticeAPI
             container.RegisterType<IPracticeLogic, PracticeLogic>();
             container.RegisterType<IPracticeRepo, PracticeRepo>();
             container.RegisterType<AccountController>(new InjectionConstructor());
+            container.RegisterType<HttpContextBase>(new InjectionFactory(c => new HttpContextWrapper(HttpContext.Current)));
 
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }
