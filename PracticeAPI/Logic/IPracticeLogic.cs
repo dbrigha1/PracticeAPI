@@ -10,7 +10,7 @@ namespace PracticeAPI.Logic
 {
     public interface IPracticeLogic
     {
-        Task<List<PracticeEntity>> GetAll();
+        Task<List<PracticeViewEntity>> GetAll();
         Task<PracticeEntity> GetOne(int id);
         Task Create(PracticeViewEntity viewEntity);
         Task Delete(int id);

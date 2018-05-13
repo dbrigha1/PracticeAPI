@@ -1,0 +1,16 @@
+﻿@model List<PracticeAPI.Models.ViewEntity.PracticeViewEntity>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<table>
+    @foreach (var practice in Model)
+    {
+        <tr>
+            <td>@practice.PracticeName</td>
+        </tr>
+    }
+</table>
+
+

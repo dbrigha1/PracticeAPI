@@ -30,9 +30,12 @@ namespace PracticeAPI.Logic
             throw new NotImplementedException();
         }
 
-        public async Task<List<PracticeEntity>> GetAll()
+        public async Task<List<PracticeViewEntity>> GetAll()
         {
-            return await _repo.GetAll();
+            var entities = await _repo.GetAll();
+            var viewEntities = _mapper.Map<List<PracticeEntity>, List<PracticeViewEntity>>(entities);
+
+            return viewEntities;
         }
 
         public Task<PracticeEntity> GetOne(int id)

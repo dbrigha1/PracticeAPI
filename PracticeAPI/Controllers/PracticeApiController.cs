@@ -12,14 +12,16 @@ using System.Web.Http;
 namespace PracticeAPI.Controllers
 {
     [Authorize]
-    public class PracticesController : ApiController
+    public class PracticeApiController : ApiController
     {
         private readonly IPracticeLogic _logic;
-        public PracticesController(IPracticeLogic logic)
+
+        public PracticeApiController(IPracticeLogic logic)
         {
             _logic = logic;
         }
         // GET api/values
+        [Route("api/values")]
         public async Task<IHttpActionResult> Get()
         {
             try
@@ -46,6 +48,7 @@ namespace PracticeAPI.Controllers
         }
 
         // POST api/values
+        [Route("api/values")]
         public async Task<IHttpActionResult> Post([FromBody]PracticeViewEntity viewEntity)
         {
             try
